@@ -1,0 +1,37 @@
+export const menuItems = [
+  { id: 1, category: 'Burgers', name: 'Classic Beef Burger', rating: 4.7, price: 8.9, image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80' },
+  { id: 2, category: 'Burgers', name: 'Crispy Chicken Burger', rating: 4.6, price: 8.4, image: 'https://images.unsplash.com/photo-1607730127050-e32a8c756fb9?auto=format&fit=crop&w=900&q=80' },
+  { id: 3, category: 'Burgers', name: 'Double Cheddar Burger', rating: 4.8, price: 10.5, image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80' },
+  { id: 4, category: 'Burgers', name: 'Veggie Garden Burger', rating: 4.5, price: 7.9, image: 'https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=900&q=80' },
+  { id: 5, category: 'Burgers', name: 'BBQ Bacon Burger', rating: 4.7, price: 10.9, image: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=900&q=80' },
+  { id: 6, category: 'Burgers', name: 'Swiss Mushroom Burger', rating: 4.4, price: 9.8, image: 'https://images.unsplash.com/photo-1598182198871-d3f4ab4fd181?auto=format&fit=crop&w=900&q=80' },
+  { id: 7, category: 'Burgers', name: 'Spicy Jalapeno Burger', rating: 4.6, price: 9.2, image: 'https://images.unsplash.com/photo-1586816001966-79b736744398?auto=format&fit=crop&w=900&q=80' },
+  { id: 8, category: 'Pizzas', name: 'Margherita Pizza', rating: 4.8, price: 11.5, image: 'https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?auto=format&fit=crop&w=900&q=80' },
+  { id: 9, category: 'Pizzas', name: 'Pepperoni Pizza', rating: 4.7, price: 12.8, image: 'https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=900&q=80' },
+  { id: 10, category: 'Pizzas', name: 'Four Cheese Pizza', rating: 4.6, price: 13.4, image: 'https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=900&q=80' },
+  { id: 11, category: 'Pizzas', name: 'Truffle Mushroom Pizza', rating: 4.7, price: 14.9, image: 'https://images.unsplash.com/photo-1571066811602-716837d681de?auto=format&fit=crop&w=900&q=80' },
+  { id: 12, category: 'Pizzas', name: 'Mediterranean Veg Pizza', rating: 4.5, price: 12.6, image: 'https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?auto=format&fit=crop&w=900&q=80' },
+  { id: 13, category: 'Pizzas', name: 'Prosciutto Rocket Pizza', rating: 4.8, price: 15.5, image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=80' },
+  { id: 14, category: 'Pizzas', name: 'Seafood Napoli Pizza', rating: 4.4, price: 16.2, image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=80' },
+  { id: 15, category: 'Milkshakes', name: 'Vanilla Bean Shake', rating: 4.5, price: 5.2, image: 'https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=900&q=80' },
+  { id: 16, category: 'Milkshakes', name: 'Belgian Chocolate Shake', rating: 4.8, price: 5.9, image: 'https://images.unsplash.com/photo-1541658016709-82535e94bc69?auto=format&fit=crop&w=900&q=80' },
+  { id: 17, category: 'Milkshakes', name: 'Strawberry Cream Shake', rating: 4.6, price: 5.6, image: 'https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=900&q=80' },
+  { id: 18, category: 'Milkshakes', name: 'Oreo Crunch Shake', rating: 4.7, price: 6.1, image: 'https://images.unsplash.com/photo-1577805947697-89e18249d767?auto=format&fit=crop&w=900&q=80' },
+  { id: 19, category: 'Milkshakes', name: 'Caramel Hazelnut Shake', rating: 4.6, price: 6.3, image: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=80' },
+  { id: 20, category: 'Milkshakes', name: 'Pistachio Shake', rating: 4.4, price: 6.4, image: 'https://images.unsplash.com/photo-1568901839119-631418a3910d?auto=format&fit=crop&w=900&q=80' },
+  { id: 21, category: 'Milkshakes', name: 'Banana Toffee Shake', rating: 4.5, price: 5.7, image: 'https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?auto=format&fit=crop&w=900&q=80' },
+  { id: 22, category: 'Italian', name: 'Tagliatelle Bolognese', rating: 4.8, price: 13.9, image: 'https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?auto=format&fit=crop&w=900&q=80' },
+  { id: 23, category: 'Italian', name: 'Creamy Pesto Gnocchi', rating: 4.7, price: 12.7, image: 'https://images.unsplash.com/photo-1473093226795-af9932fe5856?auto=format&fit=crop&w=900&q=80' },
+  { id: 24, category: 'French', name: 'Croque Monsieur', rating: 4.5, price: 9.6, image: 'https://images.unsplash.com/photo-1481070555726-e2fe8357725c?auto=format&fit=crop&w=900&q=80' },
+  { id: 25, category: 'French', name: 'Ratatouille Bowl', rating: 4.6, price: 11.4, image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=80' },
+  { id: 26, category: 'Beverages', name: 'Fresh Orange Spritz', rating: 4.5, price: 4.7, image: 'https://images.unsplash.com/photo-1600271886742-f049cd451bba?auto=format&fit=crop&w=900&q=80' },
+  { id: 27, category: 'Beverages', name: 'Iced Latte', rating: 4.6, price: 4.9, image: 'https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=900&q=80' },
+  { id: 28, category: 'Ice Cream', name: 'Gelato Trio Cup', rating: 4.8, price: 6.8, image: 'https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?auto=format&fit=crop&w=900&q=80' },
+  { id: 29, category: 'Chocolates', name: 'Swiss Chocolate Box', rating: 4.7, price: 8.5, image: 'https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=900&q=80' },
+  { id: 30, category: 'Breads', name: 'Artisan Sourdough', rating: 4.6, price: 4.8, image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=900&q=80' },
+  { id: 31, category: 'Breads', name: 'Butter Croissant Pack', rating: 4.8, price: 5.4, image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=80' },
+  { id: 32, category: 'Salads', name: 'Greek Feta Salad', rating: 4.5, price: 8.7, image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=80' }
+];
+
+export const categories = ['All', ...new Set(menuItems.map((item) => item.category))];
+export const euro = new Intl.NumberFormat('en-IE', { style: 'currency', currency: 'EUR' });
