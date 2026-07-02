@@ -47,67 +47,70 @@
 ---
 
 ## 📁 Project Structure
+## 📁 Project Structure
 
-QuickBytes/
-├── backend/ # Express API server
-│ ├── src/
-│ │ ├── db/
-│ │ │ ├── schema/
-│ │ │ │ ├── index.ts # Barrel export
-│ │ │ │ ├── users.ts # Users table
-│ │ │ │ ├── restaurants.ts # Restaurants table
-│ │ │ │ ├── menuItems.ts # Menu items table
-│ │ │ │ ├── orders.ts # Orders table
-│ │ │ │ ├── orderItems.ts # Order items table
-│ │ │ │ └── seatBookings.ts # Seat bookings table
-│ │ │ └── index.ts # Drizzle DB instance
-│ │ ├── middleware/
-│ │ │ └── authMiddleware.ts # JWT verification
-│ │ ├── routes/
-│ │ │ ├── auth.ts # /api/auth/*
-│ │ │ ├── menuItems.ts # /api/menu-items/*
-│ │ │ ├── orders.ts # /api/orders/*
-│ │ │ ├── restaurants.ts # /api/restaurants/*
-│ │ │ ├── seatBookings.ts # /api/seats/*
-│ │ │ └── users.ts # /api/users/*
-│ │ ├── types/
-│ │ ├── app.ts # Express app setup, CORS
-│ │ └── index.ts # Server entry point
-│ ├── drizzle.config.ts
-│ ├── seed.ts # DB seed script
-│ ├── .env # Environment variables (not committed)
-│ ├── .env.example
-│ └── package.json
+```text
+Chinnu/
+├── backend/                         # Express + TypeScript API
+│   ├── src/
+│   │   ├── db/
+│   │   │   ├── schema/
+│   │   │   │   ├── index.ts
+│   │   │   │   ├── users.ts
+│   │   │   │   ├── restaurants.ts
+│   │   │   │   ├── menuItems.ts
+│   │   │   │   ├── orders.ts
+│   │   │   │   ├── orderItems.ts
+│   │   │   │   └── seatBookings.ts
+│   │   │   └── index.ts
+│   │   ├── middleware/
+│   │   │   └── authMiddleware.ts
+│   │   ├── routes/
+│   │   │   ├── auth.ts
+│   │   │   ├── menuItems.ts
+│   │   │   ├── orders.ts
+│   │   │   ├── restaurants.ts
+│   │   │   ├── seatBookings.ts
+│   │   │   └── users.ts
+│   │   ├── types/
+│   │   ├── app.ts
+│   │   └── index.ts
+│   ├── drizzle.config.ts
+│   ├── seed.ts
+│   ├── .env.example
+│   └── package.json
+├── frontend/
+|   ├── quickbytes-main/                 # React + Vite Frontend
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── AuthModal.jsx
+│   │   │   ├── Cart.jsx
+│   │   │   ├── CategoryTabs.jsx
+│   │   │   ├── FoodGrid.jsx
+│   │   │   ├── FoodModal.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   ├── Hero.jsx
+│   │   │   ├── Logo.jsx
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── SeatBooking.jsx
+│   │   │   └── Sidebar.jsx
+│   │   ├── pages/
+│   │   │   ├── AdminPage.jsx
+│   │   │   ├── CheckoutPage.jsx
+│   │   │   ├── MenuPage.jsx
+│   │   │   ├── OrderConfirmationPage.jsx
+│   │   │   ├── OrderTrackingPage.jsx
+│   │   │   └── WelcomePage.jsx
+│   │   ├── data/
+│   │   │   └── menuItems.js
+│   │   ├── api.js
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── .env.example
+│   └── package.json
 │
-└── quickbytes-main/ # React + Vite frontend
-├── src/
-│ ├── components/
-│ │ ├── AuthModal.jsx # Login/Register modal
-│ │ ├── Cart.jsx # Shopping cart sidebar
-│ │ ├── CategoryTabs.jsx # Menu category filter tabs
-│ │ ├── FoodGrid.jsx # Grid of food cards
-│ │ ├── FoodModal.jsx # Food item detail popup
-│ │ ├── Footer.jsx
-│ │ ├── Hero.jsx
-│ │ ├── Logo.jsx
-│ │ ├── Navbar.jsx
-│ │ ├── SeatBooking.jsx # Dine-in seat selector
-│ │ └── Sidebar.jsx # Mode navigation
-│ ├── pages/
-│ │ ├── AdminPage.jsx # Admin order management
-│ │ ├── CheckoutPage.jsx # Payment simulation
-│ │ ├── MenuPage.jsx # Main menu + cart/seats
-│ │ ├── OrderConfirmationPage.jsx
-│ │ ├── OrderTrackingPage.jsx # Live order tracking
-│ │ └── WelcomePage.jsx # Landing / mode selection
-│ ├── data/
-│ │ └── menuItems.js # Currency formatter
-│ ├── App.jsx # Root component, state & routing
-│ ├── api.js # All API calls
-│ └── main.jsx
-├── .env # VITE_API_URL (not committed)
-├── .env.example
-└── package.json
+├── README.md
+└── .gitignore
 
 ## ⚙️ Prerequisites
 
