@@ -37,7 +37,7 @@ router.post("/users", async (req, res) => {
 
 // GET /api/users/:id — protected, never returns password
 router.get("/users/:id", authenticate, async (req, res) => {
-  const id = parseInt(req.params.id, 10);
+  const id = parseInt(req.params.id as string, 10);
   if (isNaN(id)) { res.status(400).json({ error: "Invalid id" }); return; }
   const [user] = await db.select({
     id: usersTable.id,
@@ -54,7 +54,7 @@ router.get("/users/:id", authenticate, async (req, res) => {
 
 // PUT /api/users/:id — protected
 router.put("/users/:id", authenticate, async (req, res) => {
-  const id = parseInt(req.params.id, 10);
+  const id = parseInt(req.params.id as string, 10);
   if (isNaN(id)) { res.status(400).json({ error: "Invalid id" }); return; }
   const parsed = insertUserSchema.partial().safeParse(req.body);
   if (!parsed.success) { res.status(400).json({ error: parsed.error.message }); return; }
@@ -72,7 +72,7 @@ router.put("/users/:id", authenticate, async (req, res) => {
 
 // DELETE /api/users/:id — protected
 router.delete("/users/:id", authenticate, async (req, res) => {
-  const id = parseInt(req.params.id, 10);
+  const id = parseInt(req.params.id as string, 10);
   if (isNaN(id)) { res.status(400).json({ error: "Invalid id" }); return; }
   const [user] = await db.delete(usersTable).where(eq(usersTable.id, id)).returning();
   if (!user) { res.status(404).json({ error: "User not found" }); return; }

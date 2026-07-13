@@ -1,6 +1,6 @@
 import { pgTable, serial, text, numeric, boolean, integer, real, timestamp } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
-import { restaurantsTable } from "./restaurants";
+import { restaurantsTable } from "./restaurants.js";
 
 export const menuItemsTable = pgTable("menu_items", {
   id: serial("id").primaryKey(),

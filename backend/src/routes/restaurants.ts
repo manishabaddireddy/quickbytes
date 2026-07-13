@@ -29,7 +29,7 @@ router.post("/restaurants", authenticate, async (req, res) => {
 
 // GET /api/restaurants/:id — public
 router.get("/restaurants/:id", async (req, res) => {
-  const id = parseInt(req.params.id, 10);
+  const id = parseInt(req.params.id as string, 10);
   if (isNaN(id)) { res.status(400).json({ error: "Invalid id" }); return; }
   const [restaurant] = await db.select().from(restaurantsTable).where(eq(restaurantsTable.id, id));
   if (!restaurant) { res.status(404).json({ error: "Restaurant not found" }); return; }
@@ -38,7 +38,7 @@ router.get("/restaurants/:id", async (req, res) => {
 
 // PUT /api/restaurants/:id — protected
 router.put("/restaurants/:id", authenticate, async (req, res) => {
-  const id = parseInt(req.params.id, 10);
+  const id = parseInt(req.params.id as string, 10);
   if (isNaN(id)) { res.status(400).json({ error: "Invalid id" }); return; }
   const parsed = insertRestaurantSchema.partial().safeParse(req.body);
   if (!parsed.success) { res.status(400).json({ error: parsed.error.message }); return; }
@@ -49,7 +49,7 @@ router.put("/restaurants/:id", authenticate, async (req, res) => {
 
 // DELETE /api/restaurants/:id — protected
 router.delete("/restaurants/:id", authenticate, async (req, res) => {
-  const id = parseInt(req.params.id, 10);
+  const id = parseInt(req.params.id as string, 10);
   if (isNaN(id)) { res.status(400).json({ error: "Invalid id" }); return; }
   const [r] = await db.delete(restaurantsTable).where(eq(restaurantsTable.id, id)).returning();
   if (!r) { res.status(404).json({ error: "Restaurant not found" }); return; }

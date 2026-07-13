@@ -17,7 +17,7 @@ router.get("/menu-items", async (req, res) => {
 
 // GET /api/restaurants/:id/menu-items — public
 router.get("/restaurants/:id/menu-items", async (req, res) => {
-  const restaurantId = parseInt(req.params.id, 10);
+  const restaurantId = parseInt(req.params.id as string, 10);
   if (isNaN(restaurantId)) { res.status(400).json({ error: "Invalid id" }); return; }
   let rows = await db.select().from(menuItemsTable).where(eq(menuItemsTable.restaurantId, restaurantId));
   if (req.query.category) {
@@ -29,7 +29,7 @@ router.get("/restaurants/:id/menu-items", async (req, res) => {
 
 // POST /api/restaurants/:id/menu-items — protected
 router.post("/restaurants/:id/menu-items", authenticate, async (req, res) => {
-  const restaurantId = parseInt(req.params.id, 10);
+  const restaurantId = parseInt(req.params.id as string, 10);
   if (isNaN(restaurantId)) { res.status(400).json({ error: "Invalid id" }); return; }
   const [restaurant] = await db.select({ id: restaurantsTable.id }).from(restaurantsTable).where(eq(restaurantsTable.id, restaurantId));
   if (!restaurant) { res.status(404).json({ error: "Restaurant not found" }); return; }
@@ -42,7 +42,7 @@ router.post("/restaurants/:id/menu-items", authenticate, async (req, res) => {
 
 // GET /api/menu-items/:id — public
 router.get("/menu-items/:id", async (req, res) => {
-  const id = parseInt(req.params.id, 10);
+  const id = parseInt(req.params.id as string, 10);
   if (isNaN(id)) { res.status(400).json({ error: "Invalid id" }); return; }
   const [item] = await db.select().from(menuItemsTable).where(eq(menuItemsTable.id, id));
   if (!item) { res.status(404).json({ error: "Menu item not found" }); return; }
@@ -51,7 +51,7 @@ router.get("/menu-items/:id", async (req, res) => {
 
 // PUT /api/menu-items/:id — protected
 router.put("/menu-items/:id", authenticate, async (req, res) => {
-  const id = parseInt(req.params.id, 10);
+  const id = parseInt(req.params.id as string, 10);
   if (isNaN(id)) { res.status(400).json({ error: "Invalid id" }); return; }
   const parsed = insertMenuItemSchema.partial().safeParse(req.body);
   if (!parsed.success) { res.status(400).json({ error: parsed.error.message }); return; }
@@ -62,7 +62,7 @@ router.put("/menu-items/:id", authenticate, async (req, res) => {
 
 // DELETE /api/menu-items/:id — protected
 router.delete("/menu-items/:id", authenticate, async (req, res) => {
-  const id = parseInt(req.params.id, 10);
+  const id = parseInt(req.params.id as string, 10);
   if (isNaN(id)) { res.status(400).json({ error: "Invalid id" }); return; }
   const [item] = await db.delete(menuItemsTable).where(eq(menuItemsTable.id, id)).returning();
   if (!item) { res.status(404).json({ error: "Menu item not found" }); return; }

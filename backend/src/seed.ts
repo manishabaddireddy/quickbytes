@@ -1,4 +1,4 @@
-import { db, restaurantsTable, menuItemsTable } from "./db";
+import { db, restaurantsTable, menuItemsTable } from "./db/index.js";
 
 async function seed() {
   console.log("Seeding...");

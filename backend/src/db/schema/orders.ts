@@ -1,8 +1,8 @@
 import { pgTable, serial, text, numeric, integer, timestamp } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
-import { usersTable } from "./users";
-import { restaurantsTable } from "./restaurants";
+import { usersTable } from "./users.js";
+import { restaurantsTable } from "./restaurants.js";
 
 export const ORDER_STATUSES = ["pending", "confirmed", "preparing", "out_for_delivery", "delivered", "cancelled"] as const;
 export type OrderStatus = (typeof ORDER_STATUSES)[number];

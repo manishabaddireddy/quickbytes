@@ -1,10 +1,10 @@
 import { Router } from "express";
-import usersRouter from "./users";
-import restaurantsRouter from "./restaurants";
-import menuItemsRouter from "./menuItems";
-import ordersRouter from "./orders";
-import authRouter from "./auth";
-import seatBookingsRouter from "./seatBookings";
+import usersRouter from "./users.js";
+import restaurantsRouter from "./restaurants.js";
+import menuItemsRouter from "./menuItems.js";
+import ordersRouter from "./orders.js";
+import authRouter from "./auth.js";
+import seatBookingsRouter from "./seatBookings.js";
 
 const router = Router();
 router.use(authRouter);
