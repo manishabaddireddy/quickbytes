@@ -47,7 +47,6 @@
 ---
 
 ## 📁 Project Structure
-## 📁 Project Structure
 
 ```text
 QuickBytes/
